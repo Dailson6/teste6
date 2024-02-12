@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHECKLIST FO.CS.TMP.01 - INSPEÇÃO STOPLOG</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.26;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f3f3;
+      }
+
+      .container {
+        max-width: 89%;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px black;
+        height: 100%;
+        margin-top: 10px;
+        
+      }
+
+      /* Adicionando regras de mídia para tornar o container responsivo */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px; /* Por exemplo, ajuste o valor conforme necessário para a largura máxima desejada */
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px; /* Por exemplo, ajuste o valor conforme necessário para a largura máxima desejada */
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px; /* Por exemplo, ajuste o valor conforme necessário para a largura máxima desejada */
+    }
+}
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      h4 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .section {
+        margin-bottom: 30px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: px;
+        font-weight: bold;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 3px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        color: red;
+      }
+
+      input[type="datetime-local"] {
+        width: 100%;
+        padding: 3px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        color: red;
+      }
+
+      input[type="checkbox"] {
+        margin-right: 5px;
+        text-align: center;
+   
+      }
+
+      .plano-acao {
+        margin-top: 10px;
+      }
+
+      textarea {
+        width: 100%;
+        height: 100px;
+        padding: 8px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+      }
+
+      .imagem {
+        margin-top: 20px;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .btn1{
+       
+        padding: 5px;
+        text-align: center;
+        margin-left: 90%;
+        border-radius: 5px;
+        cursor: pointer;
+      
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+      }
+
+
+      .checkbox-container {
+        width: 100%;
+        padding-left: 5px;
+      }
+
+      .checkbox-container {
+        display: flex; /* Torna os elementos filhos em um flex container */
+        flex-wrap: wrap; /* Permite que os elementos se movam para a próxima linha conforme necessário */
+      }
+
+      .checkbox-label {
+        margin-right: 20px; /* Espaçamento entre os checkboxes */
+      }
+
+      .checkbox-label input[type="checkbox"] {
+        margin-right: 5px; /* Espaçamento entre o checkbox e o texto */
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid black; /* Linha horizontal */
+     
+      }
+     
+     
+      th,
+      td {
+        background-color: #f2f2f2;
+        font-size: 11px;
+        padding: 3px;
+        text-align: left;
+
+      }
+      h4.Trabalho1{
+        color: red;
+        text-align: center;
+        
+      }
+      h4.Trabalho2{
+        color: orange;
+        text-align: center;
+
+      }
+      h4.Trabalho3{
+        color: #FF7C80;
+        text-align: center;
+
+      }
+      h4.Trabalho4{
+        color: rgba(255, 187, 0, 0.767);
+        text-align: center;
+
+      }
+      h4.Trabalho5{
+        color: #0F5112;
+        text-align: center;
+
+      }
+      
+      h4.Trabalho6{
+        color: gray;
+        text-align: center;
+
+      }
+      table.Riscos_potenciais{
+        display: none;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>PERMISSÃO DE TRABALHO</h1>
+      <div class="section">
+        <div class="checkbox-container">
+          <label class="checkbox-label"
+            ><input class="checkbox-input" type="checkbox" />Trabalho a
+            quente</label
+          >
+          <label class="checkbox-label"
+            ><input class="checkbox-input" type="checkbox" />Trabalho em
+            altura</label
+          >
+          <label class="checkbox-label"
+            ><input class="checkbox-input" type="checkbox" />Içamento de
+            carga</label
+          >
+          <label class="checkbox-label"
+            ><input class="checkbox-input" type="checkbox" />Eletricidade</label
+          >
+          <label class="checkbox-label"
+            ><input class="checkbox-input" type="checkbox" />Escavações</label
+          >
+          <label class="checkbox-label"
+            ><input class="checkbox-input" type="checkbox" />Espaço
+            confinado</label
+          >
+        </div>
+        <div class="checkbox-container">
+          <label for="Potencial">Potencial de Gravidade:</label>
+          <label class="checkbox-label"
+            ><input class="checkbox-input" type="checkbox" />A</label
+          >
+          <label class="checkbox-label"
+            ><input class="checkbox-input" type="checkbox" />B</label
+          >
+          <label class="checkbox-label"
+            ><input class="checkbox-input" type="checkbox" />C</label
+          >
+        </div>
+        <br />
+        <label for="inspetor">Nome da empresa:</label>
+        <input type="text" id="inspetor" />
+        <label for="data">Data e hora:</label>
+        <input type="datetime-local" id="data" />
+        <label for="local">Local de Trabalho:</label>
+        <input type="text" id="local" />
+        <label for="Descrição">Descrição do Trabalho:</label>
+        <input type="text" id="Descrição" />
+        <label for="Equipamentos">Equipamento/estrutura envolvido:</label>
+        <input type="text" id="Equipamentos" />
+      </div>
+
+      
+
+      <table class="Riscos_potenciais">
+        <h4>Riscos potenciais</h4>
+        <tr>
+          <td>
+            <label
+              ><input type="checkbox" /> Explosão/ Incêndio</label
+            >
+          </td>
+          <td>
+            <label><input type="checkbox" /> Queimaduras</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Animais peçonhentos</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Excesso de particulados</label>
+          </td>
+          <td>
+            <label
+              ><input type="checkbox" /> Queda de material/ objetos
+             </label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              ><input type="checkbox" /> Acúmulo de Eletricidade Estática</label
+            >
+          </td>
+          <td>
+            <label><input type="checkbox" /> Produtos químicos/Corrosivos/Tóxicos</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Codições climáticas desfavoráveis</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Atropelamento/Abalroamento  </label>
+          </td>
+          <td>
+            <label
+              ><input type="checkbox" /> Influência externa de/Terceiros</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              ><input type="checkbox" /> Choque elétrico/Magnéticos</label
+            >
+          </td>
+          <td>
+            <label><input type="checkbox" /> Ergonomia</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Animais peçonhentos</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Excesso de particulados</label>
+          </td>
+          <td>
+            <label
+              ><input type="checkbox" /> Queda de material/ objetos
+              Magnéticos</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+            >
+          </td>
+          <td>
+            <label><input type="checkbox" /> Queimaduras</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Animais peçonhentos</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Excesso de particulados</label>
+          </td>
+          <td>
+            <label
+              ><input type="checkbox" /> Queda de material/ objetos
+              Magnéticos</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+            >
+          </td>
+          <td>
+            <label><input type="checkbox" /> Queimaduras</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Animais peçonhentos</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Excesso de particulados</label>
+          </td>
+          <td>
+            <label
+              ><input type="checkbox" /> Queda de material/ objetos
+              Magnéticos</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td colspan="5">
+            Outros: (escada, plataforma, andaimes)
+            <input class="outros" type="text" />
+          </td>
+        </tr>
+      </table>
+
+
+
+      <table>
+        <h4>Equipamentos Utilizados</h4>
+        <tr>
+          <td>
+            <label><input type="checkbox" /> Máquina de solda</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Maçarico</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Animais peçonhentos</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Excesso de particulados</label>
+          </td>
+          <td>
+            <label
+              ><input type="checkbox" /> Queda de material/ objetos
+              Magnéticos</label
+            >
+          </td>
+        </tr>
+      </table>
+
+
+       
+      <table>
+        <h4>Precauções Obrigatória para Qualquer Natureza de serviço</h4>
+        <tr>
+          <td>
+            <label
+              ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+            >
+          </td>
+          <td>
+            <label><input type="checkbox" /> Queimaduras</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Animais peçonhentos</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Excesso de particulados</label>
+          </td>
+          <td>
+            <label
+              ><input type="checkbox" /> Queda de material/ objetos
+              Magnéticos</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+            >
+          </td>
+          <td>
+            <label><input type="checkbox" /> Queimaduras</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Animais peçonhentos</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Excesso de particulados</label>
+          </td>
+          <td>
+            <label
+              ><input type="checkbox" /> Queda de material/ objetos
+              Magnéticos</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+            >
+          </td>
+          <td>
+            <label><input type="checkbox" /> Queimaduras</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Animais peçonhentos</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Excesso de particulados</label>
+          </td>
+          <td>
+            <label
+              ><input type="checkbox" /> Queda de material/ objetos
+              Magnéticos</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+            >
+          </td>
+          <td>
+            <label><input type="checkbox" /> Queimaduras</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Animais peçonhentos</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Excesso de particulados</label>
+          </td>
+          <td>
+            <label
+              ><input type="checkbox" /> Queda de material/ objetos
+              Magnéticos</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+            >
+          </td>
+          <td>
+            <label><input type="checkbox" /> Queimaduras</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Animais peçonhentos</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Excesso de particulados</label>
+          </td>
+          <td>
+            <label
+              ><input type="checkbox" /> Queda de material/ objetos
+              Magnéticos</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td colspan="5">
+            Outros: (escada, plataforma, andaimes)
+            <input class="outros" type="text" />
+          </td>
+        </tr>
+      </table>
+      
+
+
+
+
+
+
+      <table>
+        <h4 class="Trabalho1">Preocupações para TRABALHO A QUENTE</h4>
+        <tr>
+          <td>
+            <label
+              ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+            >
+          </td>
+          <td>
+            <label><input type="checkbox" /> Queimaduras</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Animais peçonhentos</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Excesso de particulados</label>
+          </td>
+          <td>
+            <label
+              ><input type="checkbox" /> Queda de material/ objetos
+              Magnéticos</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+            >
+          </td>
+          <td>
+            <label><input type="checkbox" /> Queimaduras</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Animais peçonhentos</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Excesso de particulados</label>
+          </td>
+          <td>
+            <label
+              ><input type="checkbox" /> Queda de material/ objetos
+              Magnéticos</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+            >
+          </td>
+          <td>
+            <label><input type="checkbox" /> Queimaduras</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Animais peçonhentos</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Excesso de particulados</label>
+          </td>
+          <td>
+            <label
+              ><input type="checkbox" /> Queda de material/ objetos
+              Magnéticos</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+            >
+          </td>
+          <td>
+            <label><input type="checkbox" /> Queimaduras</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Animais peçonhentos</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Excesso de particulados</label>
+          </td>
+          <td>
+            <label
+              ><input type="checkbox" /> Queda de material/ objetos
+              Magnéticos</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+            >
+          </td>
+          <td>
+            <label><input type="checkbox" /> Queimaduras</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Animais peçonhentos</label>
+          </td>
+          <td>
+            <label><input type="checkbox" /> Excesso de particulados</label>
+          </td>
+          <td>
+            <label
+              ><input type="checkbox" /> Queda de material/ objetos
+              Magnéticos</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td colspan="5">
+            Outros: (escada, plataforma, andaimes)
+            <input class="outros" type="text" />
+          </td>
+        </tr>
+      </table>
+      
+
+
+
+    </table>
+    <table>
+      <h4 class="Trabalho2">Preocupações para TRABALHO EM ALTURA</h4>
+      <tr>
+        <td>
+          <label
+            ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+          >
+        </td>
+        <td>
+          <label><input type="checkbox" /> Queimaduras</label>
+        </td>
+        <td>
+          <label><input type="checkbox" /> Animais peçonhentos</label>
+        </td>
+        <td>
+          <label><input type="checkbox" /> Excesso de particulados</label>
+        </td>
+        <td>
+          <label
+            ><input type="checkbox" /> Queda de material/ objetos
+            Magnéticos</label
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+          >
+        </td>
+        <td>
+          <label><input type="checkbox" /> Queimaduras</label>
+        </td>
+        <td>
+          <label><input type="checkbox" /> Animais peçonhentos</label>
+        </td>
+        <td>
+          <label><input type="checkbox" /> Excesso de particulados</label>
+        </td>
+        <td>
+          <label
+            ><input type="checkbox" /> Queda de material/ objetos
+            Magnéticos</label
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+          >
+        </td>
+        <td>
+          <label><input type="checkbox" /> Queimaduras</label>
+        </td>
+        <td>
+          <label><input type="checkbox" /> Animais peçonhentos</label>
+        </td>
+        <td>
+          <label><input type="checkbox" /> Excesso de particulados</label>
+        </td>
+        <td>
+          <label
+            ><input type="checkbox" /> Queda de material/ objetos
+            Magnéticos</label
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+          >
+        </td>
+        <td>
+          <label><input type="checkbox" /> Queimaduras</label>
+        </td>
+        <td>
+          <label><input type="checkbox" /> Animais peçonhentos</label>
+        </td>
+        <td>
+          <label><input type="checkbox" /> Excesso de particulados</label>
+        </td>
+        <td>
+          <label
+            ><input type="checkbox" /> Queda de material/ objetos
+            Magnéticos</label
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+          >
+        </td>
+        <td>
+          <label><input type="checkbox" /> Queimaduras</label>
+        </td>
+        <td>
+          <label><input type="checkbox" /> Animais peçonhentos</label>
+        </td>
+        <td>
+          <label><input type="checkbox" /> Excesso de particulados</label>
+        </td>
+        <td>
+          <label
+            ><input type="checkbox" /> Queda de material/ objetos
+            Magnéticos</label
+          >
+        </td>
+      </tr>
+      <tr>
+        <td colspan="5">
+          Outros: (escada, plataforma, andaimes)
+          <input class="outros" type="text" />
+        </td>
+      </tr>
+    </table>
+
+
+
+
+  </table>
+  <table>
+    <h4 class="Trabalho3">Preocupações para TRABALHO PARA IÇAMENTO DE CARGA</h4>
+    <tr>
+      <td>
+        <label
+          ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+        >
+      </td>
+      <td>
+        <label><input type="checkbox" /> Queimaduras</label>
+      </td>
+      <td>
+        <label><input type="checkbox" /> Animais peçonhentos</label>
+      </td>
+      <td>
+        <label><input type="checkbox" /> Excesso de particulados</label>
+      </td>
+      <td>
+        <label
+          ><input type="checkbox" /> Queda de material/ objetos
+          Magnéticos</label
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label
+          ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+        >
+      </td>
+      <td>
+        <label><input type="checkbox" /> Queimaduras</label>
+      </td>
+      <td>
+        <label><input type="checkbox" /> Animais peçonhentos</label>
+      </td>
+      <td>
+        <label><input type="checkbox" /> Excesso de particulados</label>
+      </td>
+      <td>
+        <label
+          ><input type="checkbox" /> Queda de material/ objetos
+          Magnéticos</label
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label
+          ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+        >
+      </td>
+      <td>
+        <label><input type="checkbox" /> Queimaduras</label>
+      </td>
+      <td>
+        <label><input type="checkbox" /> Animais peçonhentos</label>
+      </td>
+      <td>
+        <label><input type="checkbox" /> Excesso de particulados</label>
+      </td>
+      <td>
+        <label
+          ><input type="checkbox" /> Queda de material/ objetos
+          Magnéticos</label
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label
+          ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+        >
+      </td>
+      <td>
+        <label><input type="checkbox" /> Queimaduras</label>
+      </td>
+      <td>
+        <label><input type="checkbox" /> Animais peçonhentos</label>
+      </td>
+      <td>
+        <label><input type="checkbox" /> Excesso de particulados</label>
+      </td>
+      <td>
+        <label
+          ><input type="checkbox" /> Queda de material/ objetos
+          Magnéticos</label
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label
+          ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+        >
+      </td>
+      <td>
+        <label><input type="checkbox" /> Queimaduras</label>
+      </td>
+      <td>
+        <label><input type="checkbox" /> Animais peçonhentos</label>
+      </td>
+      <td>
+        <label><input type="checkbox" /> Excesso de particulados</label>
+      </td>
+      <td>
+        <label
+          ><input type="checkbox" /> Queda de material/ objetos
+          Magnéticos</label
+        >
+      </td>
+    </tr>
+    <tr>
+      <td colspan="5">
+        Outros: (escada, plataforma, andaimes)
+        <input class="outros" type="text" />
+      </td>
+    </tr>
+  </table>
+
+
+
+
+</table>
+<table>
+  <h4 class="Trabalho4">Preocupações para TRABALHO COM ELETRICIDADE</h4>
+  <tr>
+    <td>
+      <label
+        ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+      >
+    </td>
+    <td>
+      <label><input type="checkbox" /> Queimaduras</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Animais peçonhentos</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Excesso de particulados</label>
+    </td>
+    <td>
+      <label
+        ><input type="checkbox" /> Queda de material/ objetos
+        Magnéticos</label
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label
+        ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+      >
+    </td>
+    <td>
+      <label><input type="checkbox" /> Queimaduras</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Animais peçonhentos</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Excesso de particulados</label>
+    </td>
+    <td>
+      <label
+        ><input type="checkbox" /> Queda de material/ objetos
+        Magnéticos</label
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label
+        ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+      >
+    </td>
+    <td>
+      <label><input type="checkbox" /> Queimaduras</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Animais peçonhentos</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Excesso de particulados</label>
+    </td>
+    <td>
+      <label
+        ><input type="checkbox" /> Queda de material/ objetos
+        Magnéticos</label
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label
+        ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+      >
+    </td>
+    <td>
+      <label><input type="checkbox" /> Queimaduras</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Animais peçonhentos</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Excesso de particulados</label>
+    </td>
+    <td>
+      <label
+        ><input type="checkbox" /> Queda de material/ objetos
+        Magnéticos</label
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label
+        ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+      >
+    </td>
+    <td>
+      <label><input type="checkbox" /> Queimaduras</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Animais peçonhentos</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Excesso de particulados</label>
+    </td>
+    <td>
+      <label
+        ><input type="checkbox" /> Queda de material/ objetos
+        Magnéticos</label
+      >
+    </td>
+  </tr>
+  <tr>
+    <td colspan="5">
+      Outros: (escada, plataforma, andaimes)
+      <input class="outros" type="text" />
+    </td>
+  </tr>
+</table>
+
+
+
+
+</table>
+<table>
+  <h4 class="Trabalho5">Preocupações para ESCAVAÇÕES</h4>
+  <tr>
+    <td>
+      <label
+        ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+      >
+    </td>
+    <td>
+      <label><input type="checkbox" /> Queimaduras</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Animais peçonhentos</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Excesso de particulados</label>
+    </td>
+    <td>
+      <label
+        ><input type="checkbox" /> Queda de material/ objetos
+        Magnéticos</label
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label
+        ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+      >
+    </td>
+    <td>
+      <label><input type="checkbox" /> Queimaduras</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Animais peçonhentos</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Excesso de particulados</label>
+    </td>
+    <td>
+      <label
+        ><input type="checkbox" /> Queda de material/ objetos
+        Magnéticos</label
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label
+        ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+      >
+    </td>
+    <td>
+      <label><input type="checkbox" /> Queimaduras</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Animais peçonhentos</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Excesso de particulados</label>
+    </td>
+    <td>
+      <label
+        ><input type="checkbox" /> Queda de material/ objetos
+        Magnéticos</label
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label
+        ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+      >
+    </td>
+    <td>
+      <label><input type="checkbox" /> Queimaduras</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Animais peçonhentos</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Excesso de particulados</label>
+    </td>
+    <td>
+      <label
+        ><input type="checkbox" /> Queda de material/ objetos
+        Magnéticos</label
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label
+        ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+      >
+    </td>
+    <td>
+      <label><input type="checkbox" /> Queimaduras</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Animais peçonhentos</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Excesso de particulados</label>
+    </td>
+    <td>
+      <label
+        ><input type="checkbox" /> Queda de material/ objetos
+        Magnéticos</label
+      >
+    </td>
+  </tr>
+  <tr>
+    <td colspan="5">
+      Outros: (escada, plataforma, andaimes)
+      <input class="outros" type="text" />
+    </td>
+  </tr>
+</table>
+
+
+
+
+</table>
+<table>
+  <h4 class="Trabalho6">Preocupações para ESPAÇO COMFINADO (Anexar formulário específico)</h4>
+  <tr>
+    <td>
+      <label
+        ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+      >
+    </td>
+    <td>
+      <label><input type="checkbox" /> Queimaduras</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Animais peçonhentos</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Excesso de particulados</label>
+    </td>
+    <td>
+      <label
+        ><input type="checkbox" /> Queda de material/ objetos
+        Magnéticos</label
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label
+        ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+      >
+    </td>
+    <td>
+      <label><input type="checkbox" /> Queimaduras</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Animais peçonhentos</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Excesso de particulados</label>
+    </td>
+    <td>
+      <label
+        ><input type="checkbox" /> Queda de material/ objetos
+        Magnéticos</label
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label
+        ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+      >
+    </td>
+    <td>
+      <label><input type="checkbox" /> Queimaduras</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Animais peçonhentos</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Excesso de particulados</label>
+    </td>
+    <td>
+      <label
+        ><input type="checkbox" /> Queda de material/ objetos
+        Magnéticos</label
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label
+        ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+      >
+    </td>
+    <td>
+      <label><input type="checkbox" /> Queimaduras</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Animais peçonhentos</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Excesso de particulados</label>
+    </td>
+    <td>
+      <label
+        ><input type="checkbox" /> Queda de material/ objetos
+        Magnéticos</label
+      >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label
+        ><input type="checkbox" /> Explosão/ Incêndio Magnéticos</label
+      >
+    </td>
+    <td>
+      <label><input type="checkbox" /> Queimaduras</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Animais peçonhentos</label>
+    </td>
+    <td>
+      <label><input type="checkbox" /> Excesso de particulados</label>
+    </td>
+    <td>
+      <label
+        ><input type="checkbox" /> Queda de material/ objetos
+        Magnéticos</label
+      >
+    </td>
+  </tr>
+  <tr>
+    <td colspan="5">
+      Outros: (escada, plataforma, andaimes)
+      <input class="outros" type="text" />
+    </td>
+  </tr>
+</table>
+<br>
+<button class="btn1" onclick="toggleTable()">Anexar formulario</button>
+
+
+
+      <div class="section">
+        <h2>1. O stoplog possui tela de contenção de resíduos?</h2>
+        <input type="checkbox" id="tela-sim" value="Sim" />SIM
+        <br />
+        <input type="checkbox" id="tela-nao" value="Não" />NÃO
+        <div class="plano-acao">
+          <label for="plano-tela">Se não houver, plano de ação:</label>
+          <textarea id="plano-tela"></textarea>
+        </div>
+      </div>
+      <!-- Outros itens do checklist -->
+      <div class="section">
+        <h2>Status</h2>
+        <p>Limpeza imediata se o stoplog estiver transbordando</p>
+        <p>
+          24h para limpeza se houver produto acumulado na tela e dentro do
+          stoplog
+        </p>
+        <p>
+          48h para limpeza se houver produto acumulado dentro ou fora do stoplog
+        </p>
+        <h2>Imagens</h2>
+        <p>Em caso de sujidade, foto do stoplog antes e depois da limpeza:</p>
+        <div class="imagem">
+          <input type="file" id="imagem-antes" />
+          <label for="imagem-antes">Foto antes da limpeza</label>
+          <input type="file" id="imagem-depois" />
+          <label for="imagem-depois">Foto depois da limpeza</label>
+        </div>
+      </div>
+    </div>
+        
+    <button class="btn" onclick="generatePDF()">Salvar como PDF</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script> 
+    <script src="scriptcod.js"></script>   
+ 
+
+
+  
+  </body>
+</html>
